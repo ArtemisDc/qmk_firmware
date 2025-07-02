@@ -2,7 +2,7 @@
     "manufacturer": "dschil138",
     "keyboard_name": "fulcrum",
     "maintainer": "ArtemisDc",
-    "bootloader": "atmel-dfu",
+    "bootloader": "caterina",
     "combo": {
         "enabled": true,
         "term": 50
