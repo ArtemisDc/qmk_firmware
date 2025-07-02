@@ -32,20 +32,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
     case L_THE:
             SEND_STRING("the");
+            break;
     case L_AND:
             SEND_STRING("and");
+            break;
     case L_AKE:
             SEND_STRING("ake");
+            break;
     case M_AE:
-            SEND_STRING(SS_TAP(X_RALT)"ae");
+            SEND_STRING(SS_TAP(X_RALT)"\"e");
+            break;
     case M_OE:
-            SEND_STRING(SS_TAP(X_RALT)"oe");
+            SEND_STRING(SS_TAP(X_RALT)"\"e");
+            break;
     case M_UE:
-            SEND_STRING(SS_TAP(X_RALT)"ue");
+            SEND_STRING(SS_TAP(X_RALT)"\"e");
+            break;
     case M_SS:
             SEND_STRING(SS_TAP(X_RALT)"ss");
+            break;
     case M_EU:
             SEND_STRING(SS_TAP(X_RALT)"=E");
+            break;
 
     }
     return true;
@@ -77,9 +85,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 KC_V,                                                    KC_QUOT,
     KC_N, KC_R, KC_S, KC_T,                                        KC_A, KC_E, KC_I, KC_O,
           KC_X, KC_C, KC_D, KC_F13,                       KC_PAUS, KC_H, KC_U, KC_K,
-               MT(MOD_LSFT, KC_SPC), OSL(2),      KC_LGUI, OSL(1),
+               MT(MOD_LSFT, KC_SPC), OSL(3),      KC_LGUI, OSL(1),
 
-             MO(5), KC_ESC, OSL(4), KC_LALT,      MO(2), KC_LCTL, KC_TAB, KC_NO
+             MO(5), KC_ESC, OSL(4), KC_LALT,      KC_NO, KC_TAB, KC_LCTL, MO(2)
     ),
     //alpha 2
     [1] = LAYOUT(
