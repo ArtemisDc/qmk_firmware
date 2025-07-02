@@ -19,26 +19,34 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 enum custom_keycodes {
     L_THE = SAFE_RANGE,
     L_AND,
-    L_AKE
+    L_AKE,
+    M_AE,
+    M_OE,
+    M_UE,
+    M_SS,
+    M_EU
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!record->event.pressed) return true;
     switch (keycode) {
     case L_THE:
-        if (record->event.pressed) {
             SEND_STRING("the");
-        }
-        break;
     case L_AND:
-        if (record->event.pressed) {
             SEND_STRING("and");
-        }
-        break;
     case L_AKE:
-        if (record->event.pressed) {
             SEND_STRING("ake");
-        }
-        break;
+    case M_AE:
+            SEND_STRING(SS_TAP(X_RALT)"ae");
+    case M_OE:
+            SEND_STRING(SS_TAP(X_RALT)"oe");
+    case M_UE:
+            SEND_STRING(SS_TAP(X_RALT)"ue");
+    case M_SS:
+            SEND_STRING(SS_TAP(X_RALT)"ss");
+    case M_EU:
+            SEND_STRING(SS_TAP(X_RALT)"=E");
+
     }
     return true;
 };
@@ -67,11 +75,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //alpha 1
     [0] = LAYOUT(
                 KC_V,                                                    KC_QUOT,
-    KC_N, KC_R, KC_S, KC_T,                                        KC_A, KC_E, KC_I, KC_9,
+    KC_N, KC_R, KC_S, KC_T,                                        KC_A, KC_E, KC_I, KC_O,
           KC_X, KC_C, KC_D, KC_F13,                       KC_PAUS, KC_H, KC_U, KC_K,
-               MT(MOD_LSFT, KC_SPC), KC_NO,      KC_LGUI, OSL(1),
+               MT(MOD_LSFT, KC_SPC), OSL(2),      KC_LGUI, OSL(1),
 
-             MO(3), KC_ESC, KC_NO, KC_LALT,      MO(2), KC_LCTL, KC_TAB, KC_NO
+             MO(5), KC_ESC, OSL(4), KC_LALT,      MO(2), KC_LCTL, KC_TAB, KC_NO
     ),
     //alpha 2
     [1] = LAYOUT(
@@ -91,8 +99,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         _______, _______, _______, _______, _______, _______, _______, _______
     ),
-    //nav
+    //sym 1
     [3] = LAYOUT(
+                      S(KC_COMM),                                        S(KC_DOT),
+    KC_LBRC, KC_RBRC, KC_SCLN, S(KC_SCLN),                         M_AE, M_SS, M_UE, M_OE,
+          KC_HASH, S(KC_7), M_EU, _______,                _______, KC_EQL, KC_MINS, S(KC_2),
+                           _______, _______,            _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______
+
+    ),
+    //sym 2
+    [4] = LAYOUT(
+                      S(KC_COMM),                                        S(KC_DOT),
+    S(KC_LBRC), S(KC_RBRC), KC_NO, S(KC_GRAVE),                        M_AE, M_SS, M_UE, M_OE,
+          KC_NO, KC_GRAVE, S(KC_4), _______,                _______, S(KC_EQUAL), S(KC_MINS), S(KC_BSLS),
+                           _______, _______,            _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______
+
+    ),
+    //nav
+    [5] = LAYOUT(
                       KC_NO,                                          KC_UP,
     KC_LSFT, KC_LALT, KC_LGUI, KC_LCTL,                      KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGUP,
            KC_LBRC, KC_MINS, KC_9,_______,          _______, KC_MS_BTN1, KC_MS_BTN2, KC_PGDN,

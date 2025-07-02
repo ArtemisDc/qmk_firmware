@@ -1,11 +1,23 @@
 {
-    "manufacturer": "Nikola Lina Trester",
+    "manufacturer": "dschil138",
     "keyboard_name": "fulcrum",
     "maintainer": "ArtemisDc",
     "bootloader": "atmel-dfu",
+    "combo": {
+        "enabled": true,
+        "term": 50
+    },
+    "development_board": "promicro",
     "diode_direction": "COL2ROW",
+    "encoder": {
+        "enabled": true,
+        "rotary": [
+            {"pin_a": "F6", "pin_b": "F5", "resolution": 4}
+        ]
+    },
     "features": {
         "bootmagic": true,
+        "combo": true,
         "command": false,
         "console": false,
         "extrakey": true,
@@ -13,53 +25,74 @@
         "nkro": true
     },
     "matrix_pins": {
-        "cols": ["C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2", "C2"],
-        "rows": ["D1", "D1", "D1", "D1"]
+        "cols": ["D7", "E6", "B4", "B5"],
+        "rows": ["D1", "D0", "D4", "C6"]
     },
-    "processor": "atmega32u4",
-    "url": "",
+    "pin_compatible": "promicro",
+    "split": {
+        "enabled": true,
+        "handedness": {
+            "pin": "F4"
+        },
+        "serial": {
+            "pin": "D2"
+        },
+        "transport": {
+            "protocol": "serial",
+            "sync": {
+                "matrix_state": true
+            }
+        }
+    },
+    "url": "https://github.com/dschil138/Fulcrum",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",
         "vid": "0xFEED"
     },
     "layouts": {
-        "LAYOUT_split_3x5_2": {
+        "LAYOUT": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0.25},
-                {"matrix": [0, 1], "x": 1, "y": 0.125},
-                {"matrix": [0, 2], "x": 2, "y": 0},
-                {"matrix": [0, 3], "x": 3, "y": 0.125},
-                {"matrix": [0, 4], "x": 4, "y": 0.25},
-                {"matrix": [0, 7], "x": 7, "y": 0.25},
-                {"matrix": [0, 8], "x": 8, "y": 0.125},
-                {"matrix": [0, 9], "x": 9, "y": 0},
-                {"matrix": [0, 10], "x": 10, "y": 0.125},
-                {"matrix": [0, 11], "x": 11, "y": 0.25},
-                {"matrix": [1, 0], "x": 0, "y": 1.25},
-                {"matrix": [1, 1], "x": 1, "y": 1.125},
-                {"matrix": [1, 2], "x": 2, "y": 1},
-                {"matrix": [1, 3], "x": 3, "y": 1.125},
-                {"matrix": [1, 4], "x": 4, "y": 1.25},
-                {"matrix": [1, 7], "x": 7, "y": 1.25},
-                {"matrix": [1, 8], "x": 8, "y": 1.125},
-                {"matrix": [1, 9], "x": 9, "y": 1},
-                {"matrix": [1, 10], "x": 10, "y": 1.125},
-                {"matrix": [1, 11], "x": 11, "y": 1.25},
-                {"matrix": [2, 0], "x": 0, "y": 2.25},
-                {"matrix": [2, 1], "x": 1, "y": 2.125},
-                {"matrix": [2, 2], "x": 2, "y": 2},
-                {"matrix": [2, 3], "x": 3, "y": 2.125},
-                {"matrix": [2, 4], "x": 4, "y": 2.25},
-                {"matrix": [2, 7], "x": 7, "y": 2.25},
-                {"matrix": [2, 8], "x": 8, "y": 2.125},
-                {"matrix": [2, 9], "x": 9, "y": 2},
-                {"matrix": [2, 10], "x": 10, "y": 2.125},
-                {"matrix": [2, 11], "x": 11, "y": 2.25},
-                {"matrix": [3, 3], "x": 3.5, "y": 3.25},
-                {"matrix": [3, 4], "x": 4.5, "y": 3.5},
-                {"matrix": [3, 6], "x": 6.5, "y": 3.5},
-                {"matrix": [3, 7], "x": 7.5, "y": 3.25}
+                {"label": "K00", "matrix": [0, 0], "x": 2, "y": 0},
+                {"label": "K43", "matrix": [4, 3], "x": 11, "y": 0},
+
+                {"label": "K10", "matrix": [1, 0], "x": 0, "y": 1.8},
+                {"label": "K11", "matrix": [1, 1], "x": 1, "y": 1.2},
+                {"label": "K12", "matrix": [1, 2], "x": 2, "y": 1},
+                {"label": "K13", "matrix": [1, 3], "x": 3, "y": 1.5},
+
+                {"label": "K50", "matrix": [5, 0], "x": 10, "y": 1.5},
+                {"label": "K51", "matrix": [5, 1], "x": 11, "y": 1},
+                {"label": "K52", "matrix": [5, 2], "x": 12, "y": 1.2},
+                {"label": "K53", "matrix": [5, 3], "x": 13, "y": 1.8},
+
+                {"label": "K21", "matrix": [2, 1], "x": 1, "y": 2.2},
+                {"label": "K22", "matrix": [2, 2], "x": 2, "y": 2},
+                {"label": "K23", "matrix": [2, 3], "x": 3, "y": 2.5},
+
+                {"label": "K20", "matrix": [2, 0], "x": 5, "y": 2},
+
+                {"label": "K63", "matrix": [6, 3], "x": 8, "y": 2},
+
+                {"label": "K60", "matrix": [6, 0], "x": 10, "y": 2.5},
+                {"label": "K61", "matrix": [6, 1], "x": 11, "y": 2},
+                {"label": "K62", "matrix": [6, 2], "x": 12, "y": 2.2},
+
+                {"label": "K02", "matrix": [0, 2], "x": 4, "y": 3.5},
+                {"label": "K03", "matrix": [0, 3], "x": 5, "y": 3.7},
+
+                {"label": "K40", "matrix": [4, 0], "x": 8, "y": 3.7},
+                {"label": "K41", "matrix": [4, 1], "x": 9, "y": 3.5},
+
+                {"label": "K30", "matrix": [3, 0], "x": 2, "y": 6},
+                {"label": "K31", "matrix": [3, 1], "x": 3, "y": 7},
+                {"label": "K32", "matrix": [3, 2], "x": 2, "y": 8},
+                {"label": "K33", "matrix": [3, 3], "x": 1, "y": 7},
+
+                {"label": "K70", "matrix": [7, 0], "x": 11, "y": 6},
+                {"label": "K71", "matrix": [7, 1], "x": 12, "y": 7},
+                {"label": "K72", "matrix": [7, 2], "x": 11, "y": 8},
+                {"label": "K73", "matrix": [7, 3], "x": 10, "y": 7}
             ]
         }
     }

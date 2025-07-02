@@ -1,12 +1,5 @@
 // Copyright 2025 Nikola Lina Trester (@ArtemisDc)
 // SPDX-License-Identifier: GPL-2.0-or-later
-
-#pragma once
-
-#define SPLIT_HAND_PIN F4
-
-#define SOFT_SERIAL_PIN D2
-
 /*
  * Feature disable options
  *  These options are also useful to firmware size reduction.
