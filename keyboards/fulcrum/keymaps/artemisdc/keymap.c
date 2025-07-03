@@ -24,7 +24,11 @@ enum custom_keycodes {
     M_OE,
     M_UE,
     M_SS,
-    M_EU
+    M_EU,
+    M_LAE,
+    M_LOE,
+    M_LUE,
+    M_LSS
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -40,17 +44,30 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("ake");
             break;
     case M_AE:
-            SEND_STRING(SS_TAP(X_RALT)"\"e");
+            SEND_STRING(SS_TAP(X_RALT)"\"a");
             break;
     case M_OE:
-            SEND_STRING(SS_TAP(X_RALT)"\"e");
+            SEND_STRING(SS_TAP(X_RALT)"\"o");
             break;
     case M_UE:
-            SEND_STRING(SS_TAP(X_RALT)"\"e");
+            SEND_STRING(SS_TAP(X_RALT)"\"u");
             break;
     case M_SS:
             SEND_STRING(SS_TAP(X_RALT)"ss");
             break;
+    case M_LAE:
+            SEND_STRING(SS_TAP(X_RALT)"\"A");
+            break;
+    case M_LOE:
+            SEND_STRING(SS_TAP(X_RALT)"\"O");
+            break;
+    case M_LUE:
+            SEND_STRING(SS_TAP(X_RALT)"\"U");
+            break;
+    case M_LSS:
+            SEND_STRING(SS_TAP(X_RALT)"SS");
+            break;
+
     case M_EU:
             SEND_STRING(SS_TAP(X_RALT)"=E");
             break;
@@ -85,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                 KC_V,                                                    KC_QUOT,
     KC_N, KC_R, KC_S, KC_T,                                        KC_A, KC_E, KC_I, KC_O,
           KC_X, KC_C, KC_D, KC_F13,                       KC_PAUS, KC_H, KC_U, KC_K,
-               MT(MOD_LSFT, KC_SPC), OSL(3),      KC_LGUI, OSL(1),
+               MT(MOD_LSFT, KC_SPC), KC_LGUI,      OSL(3), OSL(1),
 
              MO(5), KC_ESC, OSL(4), KC_LALT,      KC_NO, KC_TAB, KC_LCTL, MO(2)
     ),
@@ -119,7 +136,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //sym 2
     [4] = LAYOUT(
                       S(KC_COMM),                                        S(KC_DOT),
-    S(KC_LBRC), S(KC_RBRC), KC_NO, S(KC_GRAVE),                        M_AE, M_SS, M_UE, M_OE,
+    S(KC_LBRC), S(KC_RBRC), KC_NO, S(KC_GRAVE),                        M_LAE, M_LSS, M_LUE, M_LOE,
           KC_NO, KC_GRAVE, S(KC_4), _______,                _______, S(KC_EQUAL), S(KC_MINS), S(KC_BSLS),
                            _______, _______,            _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______
