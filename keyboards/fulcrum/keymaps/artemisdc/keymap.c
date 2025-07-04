@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //alpha 1
     [0] = LAYOUT(
                 KC_V,                                                    KC_QUOT,
-    KC_N, KC_R, KC_S, MT(KC_LCTL, KC_T),              MT(MOD_LCTL, KC_A), KC_E, KC_I, KC_O,
+    KC_N, KC_R, KC_S, MT(MOD_LCTL, KC_T),              MT(MOD_LCTL, KC_A), KC_E, KC_I, KC_O,
           KC_X, KC_C, KC_D, KC_F13,                       KC_PAUS, KC_H, KC_U, KC_K,
                MT(MOD_LSFT, KC_SPC), KC_LGUI,      OSL(3), OSL(1),
 
