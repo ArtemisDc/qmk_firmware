@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //sym 1
     [3] = LAYOUT(
                       S(KC_COMM),                                        S(KC_DOT),
-    KC_LBRC, KC_RBRC, KC_SCLN, MT(MOD_LCTL, M_CO), MT(MOD_LCTL, M_AE), M_SS, M_UE, M_OE,
+    KC_LBRC, KC_RBRC, KC_SCLN, M_CO,                       MT(MOD_LCTL, M_AE), M_SS, M_UE, M_OE,
           KC_HASH, S(KC_7), M_EU, _______,                _______, KC_EQL, KC_MINS, S(KC_2),
                            _______, _______,            _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______
@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //sym 2
     [4] = LAYOUT(
                       S(KC_COMM),                                        S(KC_DOT),
-    S(KC_LBRC), S(KC_RBRC), KC_NO, MT(MOD_LCTL, M_GR),        MT(MOD_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
+    S(KC_LBRC), S(KC_RBRC), KC_NO, M_GR,                     MT(MOD_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
           KC_NO, KC_GRAVE, S(KC_4), _______,                _______, S(KC_EQUAL), S(KC_MINS), S(KC_BSLS),
                            _______, _______,            _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______
