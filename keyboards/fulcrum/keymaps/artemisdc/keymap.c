@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //alpha 1
     [0] = LAYOUT(
                 KC_V,                                                    KC_QUOT,
-    KC_N, KC_R, KC_S, MT(KC_LCTL, KC_T),              MT(KC_LCTL, KC_A), KC_E, KC_I, KC_O,
+    KC_N, KC_R, KC_S, MT(KC_LCTL, KC_T),              MT(MOD_LCTL, KC_A), KC_E, KC_I, KC_O,
           KC_X, KC_C, KC_D, KC_F13,                       KC_PAUS, KC_H, KC_U, KC_K,
                MT(MOD_LSFT, KC_SPC), KC_LGUI,      OSL(3), OSL(1),
 
@@ -110,7 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //alpha 2
     [1] = LAYOUT(
                 KC_W,                                                   KC_Z,
-    KC_J, KC_F, KC_L, MT(KC_LCTL, KC_P),                       MT(KC_LCTL, L_AND),   L_THE, KC_Y, KC_Q,
+    KC_J, KC_F, KC_L, MT(MOD_LCTL, KC_P),                       MT(MOD_LCTL, L_AND),   L_THE, KC_Y, KC_Q,
           KC_B, KC_M, KC_G,_______,                 _______, KC_SCLN, KC_COMM, L_AKE,
                      _______, _______,         KC_LGUI, TO(0),
 
@@ -119,7 +119,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //num
     [2] = LAYOUT(
                 KC_LBRC,                                                 KC_RBRC,
-    KC_6, KC_7, KC_8, MT(KC_LCTL, KC_0),                MT(KC_LCTL, KC_1), KC_3, KC_4, KC_5,
+    KC_6, KC_7, KC_8, MT(MOD_LCTL, KC_0),                MT(MOD_LCTL, KC_1), KC_3, KC_4, KC_5,
          KC_LBRC, KC_MINS, KC_9, _______,                 _______, KC_2, KC_EQL, KC_RBRC,
                           _______, _______,           KC_LGUI, TO(0),
 
@@ -128,7 +128,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //sym 1
     [3] = LAYOUT(
                       S(KC_COMM),                                        S(KC_DOT),
-    KC_LBRC, KC_RBRC, KC_SCLN, MT(KC_LCTL, S(KC_SCLN)), MT(KC_LCTL, M_AE), M_SS, M_UE, M_OE,
+    KC_LBRC, KC_RBRC, KC_SCLN, MT(MOD_LCTL, S(KC_SCLN)), MT(MOD_LCTL, M_AE), M_SS, M_UE, M_OE,
           KC_HASH, S(KC_7), M_EU, _______,                _______, KC_EQL, KC_MINS, S(KC_2),
                            _______, _______,            _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______
@@ -137,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //sym 2
     [4] = LAYOUT(
                       S(KC_COMM),                                        S(KC_DOT),
-    S(KC_LBRC), S(KC_RBRC), KC_NO, MT(KC_LCTL, S(KC_GRAVE)),        MT(KC_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
+    S(KC_LBRC), S(KC_RBRC), KC_NO, MT(MOD_LCTL, S(KC_GRAVE)),        MT(MOD_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
           KC_NO, KC_GRAVE, S(KC_4), _______,                _______, S(KC_EQUAL), S(KC_MINS), S(KC_BSLS),
                            _______, _______,            _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______
