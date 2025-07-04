@@ -29,7 +29,8 @@ enum custom_keycodes {
     M_LOE,
     M_LUE,
     M_LSS,
-    M_CO
+    M_CO,
+    M_GR,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -74,6 +75,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     case M_CO:
             SEND_STRING(":");
+            break;
+    case M_GR:
+            SEND_STRING("~");
             break;
     }
     return true;
@@ -140,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //sym 2
     [4] = LAYOUT(
                       S(KC_COMM),                                        S(KC_DOT),
-    S(KC_LBRC), S(KC_RBRC), KC_NO, MT(MOD_LCTL, S(KC_GRAVE)),        MT(MOD_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
+    S(KC_LBRC), S(KC_RBRC), KC_NO, MT(MOD_LCTL, M_GR),        MT(MOD_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
           KC_NO, KC_GRAVE, S(KC_4), _______,                _______, S(KC_EQUAL), S(KC_MINS), S(KC_BSLS),
                            _______, _______,            _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______
