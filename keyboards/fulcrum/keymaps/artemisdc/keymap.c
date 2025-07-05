@@ -11,6 +11,8 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [1] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
     [2] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
     [3] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [4] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [5] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
 };
 #endif
 
@@ -109,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
                 KC_V,                                                    KC_QUOT,
     KC_N, KC_R, KC_S, MT(MOD_LCTL, KC_T),              MT(MOD_LCTL, KC_A), KC_E, KC_I, KC_O,
-          KC_X, KC_C, KC_D, KC_F13,                       KC_PAUS, KC_H, KC_U, KC_K,
+          KC_X, KC_C, KC_D, KC_F13,                       KC_MPLY, KC_H, KC_U, KC_K,
                MT(MOD_LSFT, KC_SPC), KC_LGUI,      OSL(3), OSL(1),
 
              MO(5), KC_ESC, OSL(4), KC_LALT,      KC_NO, KC_TAB, KC_LCTL, MO(2)
