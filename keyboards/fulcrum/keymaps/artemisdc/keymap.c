@@ -13,6 +13,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [3] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
     [4] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
     [5] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [6] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD),  ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
 };
 #endif
 
@@ -155,12 +156,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //nav
     [5] = LAYOUT(
                       KC_NO,                                          KC_UP,
-    KC_LSFT, KC_LALT, KC_LGUI, KC_LCTL,                      KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGUP,
-           KC_LBRC, KC_MINS, KC_9,_______,          _______, KC_MS_BTN1, KC_MS_BTN2, KC_PGDN,
+    MO(6), KC_MS_BTN3, KC_MS_BTN2, KC_MS_BTN1,                      KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGUP,
+           KC_NO, KC_NO, KC_NO,_______,          _______, KC_LALT, KC_NO, KC_PGDN,
                           _______, _______,      KC_LGUI, TO(0),
 
         _______, _______, _______, _______, _______, _______, _______, _______
     ),
+    [6] = LAYOUT(
+                      _______,                                          _______,
+    _______,_______,_______,_______,                                _______,_______,_______,_______,
+            _______,_______,_______,_______,              _______,_______,_______,_______,
+                          _______, _______,      _______,_______,
+
+        _______, _______, _______, _______, _______, _______, _______, _______
+    ),
+
+
 
 
 
