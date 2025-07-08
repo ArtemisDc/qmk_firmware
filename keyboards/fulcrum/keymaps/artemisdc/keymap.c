@@ -49,7 +49,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             SEND_STRING("ake");
             break;
     case M_AE:
-            SEND_STRING(SS_TAP(X_RALT)"\"a");
+            SEND_STRING(SS_TAP(X_RALT)"a\"");
             break;
     case M_OE:
             SEND_STRING(SS_TAP(X_RALT)"\"o");
@@ -96,7 +96,7 @@ const uint16_t PROGMEM rbrck[] = {KC_A, KC_H, COMBO_END};
 const uint16_t PROGMEM slash[] = {KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM exclam[] = {KC_S, KC_C, COMBO_END};
 combo_t key_combos[] = {
-    COMBO(ctr_bckspc, C(KC_BSPC)),
+    COMBO(ctr_bckspc, LCTL(KC_BSPC)),
     COMBO(bckspc, KC_BSPC),
     COMBO(retrn, KC_ENT),
     COMBO(dot, KC_DOT),
@@ -147,7 +147,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //sym 2
     [4] = LAYOUT(
                       S(KC_COMM),                                        S(KC_DOT),
-    S(KC_LBRC), S(KC_RBRC), KC_NO, M_GR,                     MT(MOD_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
+    S(KC_LBRC), S(KC_RBRC), KC_BSLS, M_GR,                     MT(MOD_LCTL, M_LAE), M_LSS, M_LUE, M_LOE,
           KC_NO, KC_GRAVE, S(KC_4), _______,                _______, S(KC_EQUAL), S(KC_MINS), S(KC_BSLS),
                            _______, _______,            _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______

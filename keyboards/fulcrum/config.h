@@ -4,7 +4,7 @@
  * Feature disable options
  *  These options are also useful to firmware size reduction.
  */
-
+#define COMBO_ONLY_FROM_LAYER 0
 /* disable debug print */
 //#define NO_DEBUG
 
