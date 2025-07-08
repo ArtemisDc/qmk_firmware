@@ -88,11 +88,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 //defining key combos
 const uint16_t PROGMEM bckspc[] = {KC_R, KC_S, COMBO_END};
-const uint16_t PROGMEM ctr_bckspc[] = {KC_R, KC_T, COMBO_END};
+const uint16_t PROGMEM ctr_bckspc[] = {KC_R, MT(MOD_LCTL, KC_T), COMBO_END};
 const uint16_t PROGMEM retrn[] = {KC_E, KC_I, COMBO_END};
 const uint16_t PROGMEM dot[] = {KC_U, KC_K, COMBO_END};
-const uint16_t PROGMEM lbrck[] = {KC_T, KC_D, COMBO_END};
-const uint16_t PROGMEM rbrck[] = {KC_A, KC_H, COMBO_END};
+const uint16_t PROGMEM lbrck[] = {MT(MOD_LCTL, KC_T), KC_D, COMBO_END};
+const uint16_t PROGMEM rbrck[] = {MT(MOD_LCTL, KC_A), KC_H, COMBO_END};
 const uint16_t PROGMEM slash[] = {KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM exclam[] = {KC_S, KC_C, COMBO_END};
 combo_t key_combos[] = {
